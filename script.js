@@ -123,10 +123,10 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.skill-box').forEach(el => observer.observe(el));
 
 // ────────────────────────────────────────────────
-// GitHub Integration – Saugatdhakal12
+// GitHub Integration – Saugatdhakal1
 // ────────────────────────────────────────────────
 
-const GITHUB_USERNAME = 'Saugatdhakal12';
+const GITHUB_USERNAME = 'Saugatdhakal1';
 
 async function loadGitHubProfile() {
     const loading = document.getElementById('github-loading');
