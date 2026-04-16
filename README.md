@@ -13,8 +13,7 @@
 ---
 
 ### This is my personal digital fortress.
-
-Built from scratch — no frameworks, no fluff.  
+ 
 Pure HTML • CSS • Vanilla JavaScript with a reactive particle neural network background, glassmorphism UI, terminal typing effect, and live GitHub stats integration.
 
 ### Highlights
