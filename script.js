@@ -62,7 +62,12 @@ function init() {
             : (canvas.height * canvas.width) / 9000;
 
     for (let i = 0; i < numberOfParticles; i++) {
-        particlesArray.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
+        particlesArray.push(
+            new Particle(
+                Math.random() * canvas.width,
+                Math.random() * canvas.height
+            )
+        );
     }
 }
 
@@ -143,11 +148,6 @@ if (whatsappForm) {
         const name = document.getElementById("userName").value.trim();
         const message = document.getElementById("userMsg").value.trim();
 
-        if (!name || !message) {
-            alert("Please fill all fields.");
-            return;
-        }
-
         const phoneNumber = "9779766473802";
         const text = `Hello, I'm ${name}\n\n${message}`;
 
@@ -157,3 +157,56 @@ if (whatsappForm) {
         window.open(whatsappURL, "_blank");
     });
 }
+
+const githubUser = "Saugatdhakal1";
+
+const loadingEl = document.getElementById("github-loading");
+const errorEl = document.getElementById("github-error");
+const contentEl = document.getElementById("github-content");
+
+fetch(`https://api.github.com/users/${githubUser}`)
+    .then(res => {
+        if (!res.ok) throw new Error();
+        return res.json();
+    })
+    .then(data => {
+        loadingEl.style.display = "none";
+        contentEl.style.display = "block";
+
+        document.getElementById("github-avatar").src = data.avatar_url;
+        document.getElementById("github-name").textContent = data.name || data.login;
+        document.getElementById("github-bio").textContent = data.bio || "No bio available";
+        document.getElementById("github-repos").textContent = data.public_repos;
+        document.getElementById("github-followers").textContent = data.followers;
+        document.getElementById("github-profile-link").href = data.html_url;
+    })
+    .catch(() => {
+        loadingEl.style.display = "none";
+        errorEl.style.display = "block";
+        errorEl.textContent = "Failed to load GitHub profile.";
+    });
+
+fetch(`https://api.github.com/users/${githubUser}/repos?sort=updated`)
+    .then(res => {
+        if (!res.ok) throw new Error();
+        return res.json();
+    })
+    .then(repos => {
+        const container = document.getElementById("repos-container");
+        container.innerHTML = "";
+
+        repos.slice(0, 6).forEach(repo => {
+            const li = document.createElement("li");
+            li.innerHTML = `
+                <div>
+                    <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                    <p>${repo.description || "No description"}</p>
+                </div>
+            `;
+            container.appendChild(li);
+        });
+    })
+    .catch(() => {
+        document.getElementById("repos-container").innerHTML =
+            "<li>Failed to load repositories</li>";
+    });
