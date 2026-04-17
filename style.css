@@ -372,10 +372,6 @@ body {
     font-size: 14px;
 }
 
-/* ────────────────────────────────────────────────
-   GitHub Section
-───────────────────────────────────────────────── */
-
 .github-card {
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--accent);
@@ -451,10 +447,6 @@ body {
     display: block;
 }
 
-/* ────────────────────────────────────────────────
-   RESPONSIVE
-───────────────────────────────────────────────── */
-
 @media (max-width: 1199px) {
     .mobile-nav-toggle {
         display: flex;
@@ -471,55 +463,46 @@ body {
     .main-content {
         margin-left: 0;
     }
+}
 
-    /* Mobile */
-    @media (max-width: 768px) {
-        .two-column-layout {
-            grid-template-columns: 1fr;
-        }
+@media (max-width: 768px) {
+
+    .hero-content h2 {
+        font-size: clamp(2rem, 6vw, 4rem);
     }
 
+    .content-section {
+        padding: 60px 20px;
+    }
 
-    /* Social logos: original colors on mobile */
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cta-btn {
+        display: block;
+        width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
     .contact-socials img {
         filter: none;
     }
 
-    .contact-socials img:hover {
-        filter: brightness(1.15);
-        transform: translateY(-8px) scale(1.2);
-    }
-
-    /* Discord promo mobile fixes */
-    .discord-promo {
-        padding: 15px;
-        margin: 20px 5% 0;
-    }
-
-    .discord-promo p {
-        font-size: 0.95rem;
-    }
-
-    .discord-btn-main {
-        font-size: 1rem;
-        padding: 12px 15px;
-        width: 100%;
-        box-sizing: border-box;
-        margin-top: 10px;
-    }
-
-    /* GitHub mobile */
-    .github-card {
-        padding: 20px;
-        margin: 0 10px;
-    }
-
-    .github-stats {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .github-stats-images img {
-        width: 100%;
+    .contact-socials img:hover,
+    .cta-btn:hover,
+    .side-nav a:hover,
+    .discord-btn-main:hover,
+    .github-link:hover,
+    .qr-display:hover {
+        transform: none;
+        filter: none;
+        background: inherit;
+        color: inherit;
+        text-shadow: none;
     }
 }
