@@ -3,17 +3,23 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saugat Dhakal | Designer & Engineer</title>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700;800&family=JetBrains+Mono:wght@400;700&display=swap"
         rel="stylesheet">
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 </head>
 
 <body>
+
     <button class="mobile-nav-toggle" onclick="toggleSidebar()">
         <span></span><span></span><span></span>
     </button>
@@ -25,6 +31,7 @@
             <img src="public/pfp.png" alt="Saugat Dhakal" class="nav-pfp">
             <h1 class="tech-font">Saugat Dhakal</h1>
         </div>
+
         <nav class="side-nav">
             <ul>
                 <li><a href="#home" class="nav-link active">Home</a></li>
@@ -37,11 +44,14 @@
     </header>
 
     <main class="main-content">
+
         <section id="home" class="hero-section">
             <div class="hero-overlay"></div>
+
             <div class="hero-content">
                 <h2>Saugat Dhakal</h2>
                 <p class="subtitle">I'm <span id="typed" class="highlight"></span></p>
+
                 <div class="hero-btns">
                     <a href="#about_me" class="cta-btn primary">EXECUTE: KNOW_ME</a>
                     <a href="#support" class="cta-btn secondary">SUPPORT_DEV</a>
@@ -51,86 +61,98 @@
 
         <section id="about_me" class="content-section">
             <h3 class="section-title">About Me</h3>
+
             <div class="about-text">
-                <p>I'm a 20-year-old <strong>Computer Engineering student</strong> from Sindhuli, Nepal, who spends way
-                    too much time thinking about how to make tech better.</p>
+                <p>
+                    I'm a 20-year-old <strong>Computer Engineering student</strong> from Sindhuli, Nepal,
+                    who spends way too much time thinking about how to make tech better.
+                </p>
+
                 <div class="discord-promo">
                     <p>DATA_LOG: Projects ecosystem running on Github</p>
-                    
+
                     <div class="discord-promo">
-                        <a href="https://saugatdhakal1.github.io/Portfolio/" target="_blank" class="discord-btn-main">
-                            Check_My_First_Project</a>
-                    </div>
-                    <!--
-                    <div class="discord-promo">
-                        <a href="" target="_blank" class="discord-btn-main">
-                            JOIN_SERVER_TO_VIEW_PROJECTS
+                        <a href="https://saugatdhakal1.github.io/Portfolio/" target="_blank"
+                            class="discord-btn-main">
+                            Check_My_First_Project
                         </a>
-                    </div> --->
+                    </div>
                 </div>
+            </div>
         </section>
 
         <section id="skills" class="content-section">
             <h3 class="section-title">Technical Mastery</h3>
+
             <div class="skills-container">
+
                 <div class="skill-box">
                     <span class="skill-name">Web-Design <i class="val">93%</i></span>
                     <div class="progress-wrap">
                         <div class="progress-in" data-percent="93%"></div>
                     </div>
                 </div>
+
                 <div class="skill-box">
                     <span class="skill-name">Coding/Programming <i class="val">89%</i></span>
                     <div class="progress-wrap">
                         <div class="progress-in" data-percent="89%"></div>
                     </div>
                 </div>
+
                 <div class="skill-box">
                     <span class="skill-name">Discord Engineering <i class="val">99%</i></span>
                     <div class="progress-wrap">
                         <div class="progress-in" data-percent="99%"></div>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section id="github" class="content-section">
             <h3 class="section-title">GitHub</h3>
+
             <div class="github-card">
+
                 <div id="github-loading">Loading GitHub profile...</div>
-                <div id="github-error" style="display:none; color:#ff6b6b; text-align:center; font-size:1.2rem;"></div>
+
+                <div id="github-error"
+                    style="display:none; color:#ff6b6b; text-align:center; font-size:1.2rem;"></div>
+
                 <div id="github-content" style="display:none;">
+
                     <img id="github-avatar" alt="Saugat Dhakal Avatar" class="github-avatar">
+
                     <h4 id="github-name">Saugat Dhakal</h4>
-                    <p id="github-bio" style="color:#aaa; margin:10px 0; font-size:1.1rem;"></p>
+
+                    <p id="github-bio"></p>
+
                     <div class="github-stats">
                         <div><strong id="github-repos">0</strong><br>Repositories</div>
                         <div><strong id="github-followers">0</strong><br>Followers</div>
                     </div>
-                    <a id="github-profile-link" href="https://github.com/Saugatdhakal1" target="_blank"
+
+                    <a id="github-profile-link"
+                        href="https://github.com/Saugatdhakal1"
+                        target="_blank"
                         class="github-link">
-                        <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
-                            alt="GitHub" class="github-logo">
                         View Profile on GitHub
                     </a>
 
-                    <!-- Recent Repositories -->
-                    <div id="github-repos-list" style="margin-top:40px;">
-                        <h5 style="text-align:center; margin-bottom:20px; color:var(--accent);">Recent Public
-                            Repositories</h5>
-                        <ul id="repos-container"
-                            style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px;">
-                        </ul>
-                    </div>
+                    <ul id="repos-container"
+                        style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px;">
+                    </ul>
+
                 </div>
             </div>
         </section>
 
         <div class="two-column-layout">
 
-
             <section id="contact_me" class="content-section">
                 <h3 class="section-title">Get In Touch</h3>
+
                 <form id="whatsappForm" class="contact-form">
                     <input type="text" id="userName" placeholder="USER_NAME" required>
                     <textarea id="userMsg" placeholder="WRITE_MESSAGE_HERE..." rows="5"></textarea>
@@ -140,6 +162,7 @@
 
             <section id="support" class="content-section">
                 <h3 class="section-title">Support</h3>
+
                 <div class="support-card">
                     <div class="payment-flex">
                         <div class="qr-display">
@@ -163,15 +186,17 @@
                 <img src="public/instagram-logo.png" alt="Instagram" class="tech-logo">
             </a>
             <a href="https://github.com/Saugatdhakal1" target="_blank">
-                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub"
-                    class="tech-logo">
+                <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                    alt="GitHub" class="tech-logo">
             </a>
         </div>
 
         <footer class="centered-footer">
             <p>© 2026 Saugat Dhakal. All Rights Reserved.</p>
         </footer>
+
     </main>
+
     <script src="script.js"></script>
 </body>
 
